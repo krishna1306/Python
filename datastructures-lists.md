@@ -99,3 +99,10 @@ index = letters.index("a")
 count = letters.count("d")
 ```
 
+### List Comprehensions
+
+```python
+# Syntax = [expression for item in items]
+values = [x*2 for x in range(5)]
+```
+

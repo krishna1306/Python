@@ -70,3 +70,13 @@ print("pro" in course)
 print("swift" not in course)
 ```
 
+### Join strings
+
+```python
+# Join an array of strings using "" (null string)
+"".join(str_array)
+
+# Join an array of strings using "," (comma)
+",".join(str_array)
+```
+

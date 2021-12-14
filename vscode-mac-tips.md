@@ -13,3 +13,10 @@ Hold `alt` key to move a selected sentence up and down
 
 
 `cmd` + `/` --> comment or uncomment
+
+
+
+`shift` + `alt` + `down` --> duplicate the selection
+
+`ctrl` + `space` --> see all the functions in a module after you wrote `from <module> import`
+
