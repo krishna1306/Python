@@ -20,3 +20,11 @@ Hold `alt` key to move a selected sentence up and down
 
 `ctrl` + `space` --> see all the functions in a module after you wrote `from <module> import`
 
+### Add Virtual Environment Path for Python
+
+Open the local settings and add the following `key:value`
+
+```json
+"python.pythonPath" : "/Users/Krishna/.local/share/virtualenvs/Helloworld-asllkjfs/bin/python3"
+```
+
