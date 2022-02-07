@@ -113,7 +113,7 @@ class TagCloud:
     self.tags = {}
   
   def add(self, tag):
-    self.tags[tag.lower()] = self.tags.get(tag.lower(, 0) + 1
+    self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
     
 cloud = TagCloud()
 cloud.add("python")
@@ -134,7 +134,7 @@ In that case
 ```python
 # Both the below statements fetch the same output
 cloud["python"]
-cloud.tag["python"]
+cloud.tags["python"]
 ```
 
 _Go through the magic methods -> `__getitem__` and `__setitem__` to understand how a container class can implement dictionary like behavior_
@@ -143,6 +143,19 @@ _Go through the magic methods -> `__getitem__` and `__setitem__` to understand h
 class TagCloud:
   def __init__(self):
     self.__tags={}
+    
+  def __getitem__(self, tag):
+    return self.tags.get(tag.lower(), 0)
+  
+  def __setitem__(self, tag, count):
+    # This is similar to doing "cloud["python"] = 10". "10" is passed as "count"
+    return self.tags[tag.lower()] = count 
+  
+  def __len__(self):
+    return len(self.tags)
+  
+  def __iter__(self):
+    return iter(self.tags)
 ```
 
 A `__` (double underscore) before the attribute name makes it private (not really inaccessible though)

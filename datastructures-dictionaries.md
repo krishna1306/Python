@@ -35,6 +35,9 @@ for key in point:
   
 for key,value in point.items():
   print(key, value)
+  
+for value in point.values():
+  print(value)
 ```
 
 ### Dictionary Comprehensions
